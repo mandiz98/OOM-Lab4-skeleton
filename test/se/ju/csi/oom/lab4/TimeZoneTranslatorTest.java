@@ -16,7 +16,7 @@ public class TimeZoneTranslatorTest {
 	@Test
 	public void testShiftTimeZone() {
 		DateTime TimeTest = new DateTime(2018, 10, 17, 14, 53, 0);
-		DateTime DateIKnow = new DateTime(2018,10,17,23,53,0);
+		DateTime DateIKnow = new DateTime("2018-10-17 23:53:0");
 		
 		TimeTest = TimeZoneTranslator.shiftTimeZone(TimeTest, 0, 9);
 		assertEquals(TimeTest.toString(),DateIKnow.toString());
